@@ -1,0 +1,8 @@
+
+.blogHeader {
+    @apply flex gap-3 justify-center  items-center mb-4 align-top  hover:scale-105 duration-200
+}
+
+.roundedImg {
+    @apply rounded-full w-[50px] h-[50px]
+}
