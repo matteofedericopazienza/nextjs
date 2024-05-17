@@ -1,0 +1,32 @@
+
+.blogHeader {
+    @apply flex gap-3 justify-center  items-center mb-4 align-top  hover:scale-105 duration-200
+}
+
+.roundedImg {
+    @apply rounded-full w-[50px] h-[50px]
+}
+
+.loginContainer {
+    @apply flex items-center justify-center h-screen bg-gray-100;
+}
+
+.loginForm {
+    @apply bg-white p-8 rounded shadow-md;
+}
+
+.loginTitle {
+    @apply text-2xl font-bold mb-4;
+}
+
+.inputField {
+    @apply w-full border border-gray-400 p-2 rounded focus:outline-none focus:border-blue-500;
+}
+
+.loginButton {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow;
+}
+
+.errorMessage {
+    @apply text-red-500 mt-4;
+}

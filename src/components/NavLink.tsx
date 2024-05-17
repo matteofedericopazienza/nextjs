@@ -4,21 +4,22 @@ import Link from "next/link";
 import clsx from "clsx";
 import {usePathname} from "next/navigation";
 
-interface LinkPageProps {
+interface NavLinkProps {
     children?: React.ReactNode;
     params?: { [key: string]: string };
     searchParams?: { [key: string]: string | string[] };
     fullPath: string;
+    className?: string;
 
 
 }
 
 
-export default function LinkPage(props: LinkPageProps): React.JSX.Element {
+export default function NavLink(props: NavLinkProps): React.JSX.Element {
     let pathname = usePathname();
 
     const classes = clsx(
-        "block hover:underline", {
+        "block hover:underline " + props.className, {
             'text-blue-500': pathname.endsWith(props.fullPath),
         });
 

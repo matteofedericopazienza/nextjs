@@ -1,12 +1,13 @@
-import LinkPage from "@/components/LinkPage";
+import NavLink from "@/components/NavLink";
 import React from "react";
 
 export default function Navigator() {
+
     return <>
-        <LinkPage fullPath={"/"}>Home</LinkPage>
-        <LinkPage fullPath={"/blog"}>Blog</LinkPage>
-        <LinkPage fullPath={"/scale"}>Scale</LinkPage>
-        <LinkPage fullPath={"/reliability"}>Reliability</LinkPage>
-        <LinkPage fullPath={"/performance"}>Performance</LinkPage>
+        <NavLink fullPath={"/"}>Home</NavLink>
+        <NavLink fullPath={"/blog"}>Blog</NavLink>
+        <NavLink fullPath={"/scale"}>Scale</NavLink>
+        <NavLink fullPath={"/reliability"}>Reliability</NavLink>
+        <NavLink fullPath={"/performance"}>Performance</NavLink>
     </>;
 }

@@ -1,24 +1,22 @@
 import React from 'react';
-import {getBlogPost, getBlogPostMongoose} from "@/app/api/blogs/[id]/route";
-import {IBlogPost} from "@/models/BlogPost";
+import {getBlogPostById} from "@/actions/blogPostFunctions";
 
 interface BlogPostPageProps {
-    children?: React.ReactNode;
-    params?: { [key: string]: string };
-    searchParams?: { [key: string]: string | string[] };
-
+    params: { slug: string };
 }
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
-    // const posts = await getBlogPost({id: "664384adb7beb9f0052c74e2"});
-    const response = await getBlogPostMongoose({id: "664384adb7beb9f0052c74e2"});
 
-
-    console.log(response)
-
+    const blogPost = await getBlogPostById({id: props.params.slug});
     return (
         <div>
-            <h2>Blog Post Title</h2>
+            {blogPost &&
+                <div>
+                    <h1>{blogPost.title} - {blogPost.author}</h1>
+
+                    <p>{blogPost.content}</p>
+                </div>
+            }
 
         </div>
     );
